@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>令和8年引津小学校恒例！大規模環境美化作業</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --navy: #1e3a8a;
             --teal: #14b8a6;
             --orange: #f97316;
-            --yellow: #eab308;
             --bg: #f8fafc;
         }
         body {
@@ -21,16 +19,6 @@
             color: #1e293b;
             overflow-x: hidden;
         }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            height: 240px;
-        }
-        @media (min-width: 768px) {
-            .chart-container { height: 280px; }
-        }
         .hero-gradient {
             background: linear-gradient(135deg, var(--navy) 0%, #1e40af 100%);
         }
@@ -38,21 +26,6 @@
             box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.05), 0 8px 10px -6px rgba(30, 58, 138, 0.05);
         }
         html { scroll-behavior: smooth; }
-
-        @keyframes pulse-subtle {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
-        }
-        .live-indicator {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            background-color: #ef4444;
-            border-radius: 50%;
-            margin-right: 8px;
-            animation: pulse-subtle 2s infinite;
-        }
     </style>
 </head>
 <body class="antialiased">
@@ -72,29 +45,26 @@
                 地域の集結力と機動力、そして子どもたちを想う心意気。<br class="hidden md:block">
                 最高に整った学び舎を、今年も共に。
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-10 rounded shadow-xl transition transform hover:scale-105 active:scale-95">
-                    今すぐ回答する
-                </a>
-                <a href="#details" class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border-2 border-white/30 font-bold py-4 px-10 rounded transition">
-                    詳細を確認
+            <div class="flex justify-center">
+                <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-12 rounded-full shadow-xl transition transform hover:scale-105 active:scale-95 text-xl">
+                    今すぐ参加回答する
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 圧巻のパフォーマンス -->
+    <!-- 圧巻のパフォーマンスセクション -->
     <section class="max-w-6xl mx-auto px-6 -mt-12 mb-10 relative z-20">
         <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow border border-slate-100">
             <div class="flex flex-col md:flex-row items-center gap-10">
                 <div class="w-full md:w-1/2">
-                    <h2 class="text-2xl md:text-4xl font-black text-navy mb-6 leading-tight">
+                    <h2 class="text-2xl md:text-4xl font-black text-navy mb-6 leading-tight text-left">
                         引津小名物！<br>圧巻の作業パフォーマンス
                     </h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6 text-left">
                         引津の美化作業は、農村地域ならではの底力と、プロ級の技術が集結する場。日頃から土地を守る皆様の力が学校を劇的に変えます。
                     </p>
-                    <div class="bg-slate-50 border-l-4 border-teal-500 p-4 rounded-r-xl italic text-gray-700 font-medium text-sm">
+                    <div class="bg-slate-50 border-l-4 border-teal-500 p-4 rounded-r-xl italic text-gray-700 font-medium text-sm text-left">
                         「引津の子のためなら」という想いが、毎年素晴らしい機動力を生み出しています。
                     </div>
                 </div>
@@ -124,7 +94,7 @@
         </div>
     </section>
 
-    <!-- 2026 TOPIC -->
+    <!-- 今年のトピックセクション -->
     <section class="max-w-6xl mx-auto px-6 mb-16">
         <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm relative">
             <div class="flex flex-col lg:flex-row lg:items-start gap-6">
@@ -134,7 +104,7 @@
                     </span>
                 </div>
                 <div class="flex-grow">
-                    <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-4 flex items-center">
+                    <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-4 flex items-center text-left">
                         今年も強力な助っ人の参戦が決定いたしました
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -161,7 +131,7 @@
         </div>
     </section>
 
-    <!-- 開催・準備ガイド -->
+    <!-- ガイドセクション -->
     <section id="details" class="max-w-6xl mx-auto px-6 mb-16">
         <h2 class="text-2xl md:text-3xl font-black text-navy mb-10 text-center flex items-center justify-center">
             <span class="w-12 h-1 bg-teal-500 mr-4 rounded-full"></span>
@@ -170,8 +140,9 @@
         </h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- 日程 -->
             <div class="space-y-6">
-                <h3 class="text-xl font-bold text-navy flex items-center">
+                <h3 class="text-xl font-bold text-navy flex items-center text-left">
                     <span class="text-3xl mr-3 text-slate-300">🗓</span> 日程と期限
                 </h3>
                 <div class="bg-white p-6 rounded-2xl border-l-8 border-teal-500 card-shadow text-left">
@@ -180,17 +151,18 @@
                     <p class="text-lg font-bold text-slate-600 mt-2 text-left">8:00 ～ 10:00 <span class="text-sm font-normal text-slate-400">（集合 7:45）</span></p>
                 </div>
                 <div class="flex justify-between items-center px-5 py-4 bg-slate-100 rounded-xl text-slate-600 border border-slate-200">
-                    <span class="text-sm font-bold text-left">予備日（雨天順延）</span>
+                    <span class="text-sm font-bold text-left text-left">予備日（雨天順延）</span>
                     <span class="text-lg font-black text-right">5/30（土）</span>
                 </div>
                 <div class="bg-orange-500 p-6 rounded-2xl text-white shadow-lg text-center">
-                    <p class="text-xs font-bold mb-1 opacity-80 uppercase tracking-widest">DeadLine</p>
-                    <p class="text-2xl font-black mb-1">5/16（土） 〆切</p>
-                    <p class="text-xs font-medium">配置計画のため、期限厳守をお願いします！</p>
+                    <p class="text-xs font-bold mb-1 opacity-80 uppercase tracking-widest text-center">DeadLine</p>
+                    <p class="text-2xl font-black mb-1 text-center">5/16（土） 〆切</p>
+                    <p class="text-xs font-medium text-center">配置計画のため、期限厳守をお願いします！</p>
                 </div>
             </div>
 
-            <div class="space-y-6 text-left">
+            <!-- 装備 -->
+            <div class="space-y-6">
                 <h3 class="text-xl font-bold text-navy flex items-center text-left">
                     <span class="text-3xl mr-3 text-slate-300">🎒</span> 装備とご協力
                 </h3>
@@ -198,22 +170,22 @@
                     <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 card-shadow">
                         <div class="bg-orange-500 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0">1</div>
                         <div>
-                            <p class="font-bold text-navy text-left">自慢の道具を持参！</p>
-                            <p class="text-xs text-slate-500 mt-1 text-left">刈払機、手鎌、軍手、飲物など。</p>
+                            <p class="font-bold text-navy text-left text-left">自慢の道具を持参！</p>
+                            <p class="text-xs text-slate-500 mt-1 text-left text-left text-slate-400">刈払機、手鎌、軍手、飲物など。</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-5 rounded-2xl bg-teal-50 border border-teal-100">
                         <div class="bg-teal-500 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0">2</div>
                         <div>
-                            <p class="font-bold text-teal-800 text-left">車両提供のお願い</p>
-                            <p class="text-xs text-teal-700 mt-1 font-bold text-left">軽トラ・ダンプ・トラクター大歓迎！</p>
+                            <p class="font-bold text-teal-800 text-left text-left">車両提供のお願い</p>
+                            <p class="text-xs text-teal-700 mt-1 font-bold text-left text-left">軽トラ・ダンプ・トラクター大歓迎！</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 card-shadow">
-                        <div class="bg-slate-800 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0 text-sm">3</div>
+                        <div class="bg-slate-800 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0 text-sm text-center">3</div>
                         <div>
-                            <p class="font-bold text-navy text-left">学校側のサポート</p>
-                            <p class="text-xs text-slate-500 mt-1 text-left">鎌、松葉ぼうき、軽トラ用シートは貸出あり。</p>
+                            <p class="font-bold text-navy text-left text-left">学校側のサポート</p>
+                            <p class="text-xs text-slate-500 mt-1 text-left text-left text-slate-400">鎌、松葉ぼうき、軽トラ用シートは貸出あり。</p>
                         </div>
                     </div>
                 </div>
@@ -221,274 +193,73 @@
         </div>
     </section>
 
-    <!-- スピードフロー -->
+    <!-- スピードフローセクション -->
     <section class="bg-white py-16 px-6 border-y border-slate-100">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-black text-navy mb-2 tracking-tight">引津式・スピード美化フロー</h2>
-            <p class="text-teal-600 font-bold mb-12 max-w-2xl mx-auto text-sm md:text-base">完璧に練り上げられた役割分担が、圧倒的な効率を生み出します。</p>
+            <p class="text-teal-600 font-bold mb-12 max-w-2xl mx-auto text-sm md:text-base text-center">完璧に練り上げられた役割分担が、圧倒的な効率を生み出します。</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-yellow-400 text-center">
-                    <div class="text-5xl mb-4">🚜</div>
-                    <h4 class="text-navy font-black text-lg mb-2">重機先導</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center">トラクター等で広範囲を迅速に処理</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-yellow-400 text-center shadow-sm transition hover:shadow-md">
+                    <div class="text-5xl mb-4 text-center">🚜</div>
+                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">重機先導</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">トラクター等で広範囲を迅速に処理</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-teal-500 text-center">
-                    <div class="text-5xl mb-4">✂️</div>
-                    <h4 class="text-navy font-black text-lg mb-2">精鋭刈込</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center">熟練の刈払機部隊による細部仕上げ</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-teal-500 text-center shadow-sm transition hover:shadow-md">
+                    <div class="text-5xl mb-4 text-center">✂️</div>
+                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">精鋭刈込</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">熟練の刈払機部隊による細部仕上げ</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-orange-500 text-center">
-                    <div class="text-5xl mb-4">🧹</div>
-                    <h4 class="text-navy font-black text-lg mb-2">一斉集草</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center">丁寧な回収とトラックへの積込</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-orange-500 text-center shadow-sm transition hover:shadow-md">
+                    <div class="text-5xl mb-4 text-center">🧹</div>
+                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">一斉集草</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">丁寧な回収とトラックへの積込</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-blue-500 text-center">
-                    <div class="text-5xl mb-4">🚛</div>
-                    <h4 class="text-navy font-black text-lg mb-2">集中輸送</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center">軽トラ部隊による迅速な搬出作戦</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-blue-500 text-center shadow-sm transition hover:shadow-md">
+                    <div class="text-5xl mb-4 text-center">🚛</div>
+                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">集中輸送</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">軽トラ部隊による迅速な搬出作戦</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 統計データ -->
-    <section class="max-w-6xl mx-auto px-6 py-16">
-        <div class="text-center mb-10">
-            <h2 class="text-2xl md:text-3xl font-black text-navy mb-2 tracking-tight">データで見る引津の力</h2>
-            <p class="text-gray-500 text-sm md:text-base">例年の驚異的な実績と、今年の構成目標。</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-3xl p-6 md:p-10 card-shadow border-l-8 border-teal-500">
-                <h3 class="text-sm font-bold text-slate-400 mb-8 text-center uppercase tracking-widest">例年の実績（期待投入数）</h3>
-                <div class="chart-container"><canvas id="equipmentChart"></canvas></div>
-            </div>
-            <div class="bg-white rounded-3xl p-6 md:p-10 card-shadow border-l-8 border-navy text-center">
-                <h3 class="text-sm font-bold text-slate-400 mb-8 text-center uppercase tracking-widest">全員が主役！参加構成目標</h3>
-                <div class="chart-container"><canvas id="participationChart"></canvas></div>
             </div>
         </div>
     </section>
 
     <!-- CTAセクション -->
-    <section id="cta" class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <section id="cta" class="max-w-4xl mx-auto px-6 py-24 text-center">
         <div class="bg-slate-900 text-white rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden text-center">
             <div class="absolute -top-10 left-1/2 -translate-x-1/2 text-9xl opacity-10">🙌</div>
-            <h2 class="text-3xl md:text-5xl font-black mb-8 text-center text-white">見せましょう、<br class="md:hidden">引津ホゴシャの底力！</h2>
-            <p class="text-lg text-slate-400 mb-12 leading-relaxed text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 text-center text-white text-center">見せましょう、<br class="md:hidden">引津ホゴシャの底力！</h2>
+            <p class="text-lg text-slate-400 mb-12 leading-relaxed text-center text-center">
                 お父さん、お母さんはもちろん、地域の皆様！<br>
                 子どもたちの自慢の学校を、私たちの手で最高の状態に仕上げましょう。
             </p>
             <div class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-10 backdrop-blur-sm text-center">
-                <p class="font-black text-2xl md:text-3xl mb-2 text-orange-400 text-center">回答期限： 5月16日（土）まで</p>
+                <p class="font-black text-2xl md:text-3xl mb-2 text-orange-400 text-center text-center">回答期限： 5月16日（土）まで</p>
                 <p class="text-sm text-slate-400 text-center text-center">※5/23・5/30両日の参加可否もフォーム内で選択可能です。</p>
             </div>
-            <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer" class="inline-block w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-black py-6 px-16 rounded-full text-2xl shadow-2xl transition transform hover:scale-105 active:scale-95 mb-8 text-center">
+            <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer" class="inline-block w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-black py-6 px-16 rounded-full text-2xl shadow-2xl transition transform hover:scale-105 active:scale-95 mb-8 text-center text-center">
                 Googleフォームで回答する
             </a>
         </div>
     </section>
 
-    <!-- 事務局情報・フッター -->
+    <!-- フッター -->
     <footer class="bg-slate-100 py-16 px-6 border-t border-slate-200">
         <div class="max-w-4xl mx-auto">
             <div class="bg-white p-8 rounded-3xl border border-slate-200 mb-12 shadow-sm text-left">
                 <h3 class="font-bold text-navy mb-4 flex items-center text-left"><span class="mr-3">💡</span> 集計体制の変更について</h3>
-                <p class="text-sm text-slate-600 leading-relaxed text-left">
-                    本年度より、子ども会単位での集計から<span class="font-bold text-orange-500 underline decoration-2">PTA（あおぞら会）による全校一括集計</span>へ移行いたしました。全児童のための活動を効率的に調整するための変更です。ご理解をお願い申し上げます。
+                <p class="text-sm text-slate-600 leading-relaxed text-left text-left">
+                    本年度より、子ども会単位での集計から<span class="font-bold text-orange-500 underline decoration-2">PTA（あおぞら会）による全校一括集計</span>へ移行いたしました。皆様のご理解をお願い申し上げます。
                 </p>
             </div>
             <div class="text-center">
-                <p class="font-black text-navy text-xl mb-3 tracking-tight text-center">引津小学校 大規模環境美化作業 実行委員会</p>
-                <p class="text-sm text-slate-500 mb-8 text-center">事務局：引津小学校 あおぞら会準備事務局（教頭） / 電話：092-328-2207</p>
+                <p class="font-black text-navy text-xl mb-3 tracking-tight text-center text-center">引津小学校 大規模環境美化作業 実行委員会</p>
+                <p class="text-sm text-slate-500 mb-8 text-center text-center text-slate-500">事務局：引津小学校 あおぞら会準備事務局（教頭） / 電話：092-328-2207</p>
                 <div class="h-px bg-slate-300 w-full mb-10 opacity-50"></div>
-                <p class="text-[10px] text-slate-400 tracking-widest font-black uppercase text-center">&copy; 2026 HIKITSU ELEMENTARY SCHOOL PTA.</p>
+                <p class="text-[10px] text-slate-400 tracking-widest font-black uppercase text-center text-center">&copy; 2026 HIKITSU ELEMENTARY SCHOOL PTA.</p>
             </div>
         </div>
     </footer>
 
-    <!-- 【最下部】リアルタイム集計ボード -->
-    <section id="live-board" class="bg-white py-20 px-6 border-t-8 border-teal-500">
-        <div class="max-w-6xl mx-auto">
-            <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow border border-slate-100">
-                <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
-                    <div>
-                        <h2 class="text-2xl md:text-3xl font-black text-navy mb-1 tracking-tight text-center md:text-left">現在の募集状況</h2>
-                        <p class="text-slate-400 text-sm flex items-center justify-center md:justify-start">
-                            <span class="live-indicator"></span>
-                            Googleフォーム回答をリアルタイム集計中
-                        </p>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-[10px] font-bold text-slate-300 uppercase tracking-widest border border-slate-200 px-3 py-1 rounded-full">
-                            最終更新: <span id="last-update-time">--:--:--</span>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                    <!-- カウンター -->
-                    <div class="grid grid-cols-2 gap-5">
-                        <div class="bg-slate-50 p-6 rounded-3xl text-center border border-slate-100">
-                            <p class="text-[11px] font-bold text-slate-500 mb-3 leading-tight text-center">5/23 (土)<br>参加できる人</p>
-                            <p class="text-5xl font-black text-teal-600 tracking-tighter text-center"><span id="count-23">0</span><span class="text-sm ml-1 font-bold text-slate-300">名</span></p>
-                        </div>
-                        <div class="bg-slate-50 p-6 rounded-3xl text-center border border-slate-100">
-                            <p class="text-[11px] font-bold text-slate-500 mb-3 leading-tight text-center">5/30 (土)予備日も<br>参加できる人</p>
-                            <p class="text-5xl font-black text-navy tracking-tighter text-center"><span id="count-30">0</span><span class="text-sm ml-1 font-bold text-slate-300">名</span></p>
-                        </div>
-                        <div class="bg-orange-50 p-6 rounded-3xl text-center border border-orange-100">
-                            <p class="text-xs font-black text-orange-400 mb-2 uppercase italic text-center text-center">Brush Cutters</p>
-                            <p class="text-4xl font-black text-orange-600 tracking-tighter text-center"><span id="count-cutter">0</span><span class="text-sm ml-1 font-bold text-orange-200">台</span></p>
-                            <p class="text-[10px] text-orange-400 mt-2 font-bold text-center">目標：20台規模</p>
-                        </div>
-                        <div class="bg-blue-50 p-6 rounded-3xl text-center border border-blue-100">
-                            <p class="text-xs font-black text-blue-400 mb-2 uppercase italic text-center text-center">Mini Trucks</p>
-                            <p class="text-4xl font-black text-blue-600 tracking-tighter text-center"><span id="count-truck">0</span><span class="text-sm ml-1 font-bold text-blue-200">台</span></p>
-                            <p class="text-[10px] text-blue-400 mt-2 font-bold text-center text-center">目標：15台規模</p>
-                        </div>
-                    </div>
-                    <!-- ライブチャート -->
-                    <div class="h-64 relative">
-                        <canvas id="liveStatsChart"></canvas>
-                    </div>
-                </div>
-                <div class="mt-12 pt-8 border-t border-slate-50 text-center">
-                    <p class="text-sm text-slate-400 font-medium italic text-center">
-                        「引津ホゴシャの力」が結集しています。皆様の熱いエントリーに心より感謝申し上げます。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Firebase Scripts -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getFirestore, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-
-        // --- Firebase Config & Setup ---
-        const firebaseConfig = JSON.parse(__firebase_config);
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const auth = getAuth(app);
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'hikitsu-beautify-2026';
-
-        // --- Live Chart Init ---
-        const lastUpdateEl = document.getElementById('last-update-time');
-        const liveStatsCtx = document.getElementById('liveStatsChart').getContext('2d');
-        let liveChart = new Chart(liveStatsCtx, {
-            type: 'bar',
-            data: {
-                labels: ['5/23参加', '5/30も参加可', '刈払機', '軽トラ'],
-                datasets: [{
-                    data: [0, 0, 0, 0],
-                    backgroundColor: ['#14b8a6', '#1e3a8a', '#f97316', '#3b82f6'],
-                    borderRadius: 12,
-                    barThickness: 32
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: { 
-                    x: { 
-                        beginAtZero: true, 
-                        grid: { color: '#f1f5f9', drawBorder: false }, 
-                        ticks: { font: { weight: 'bold', size: 10 }, stepSize: 5, precision: 0 } 
-                    },
-                    y: { grid: { display: false }, ticks: { font: { weight: 'bold', size: 12, family: "'Noto Sans JP'" } } }
-                },
-                plugins: { legend: { display: false } }
-            }
-        });
-
-        const updateUI = (data) => {
-            const { day23 = 0, day30 = 0, cutters = 0, trucks = 0 } = data;
-            if (document.getElementById('count-23')) document.getElementById('count-23').innerText = day23;
-            if (document.getElementById('count-30')) document.getElementById('count-30').innerText = day30;
-            if (document.getElementById('count-cutter')) document.getElementById('count-cutter').innerText = cutters;
-            if (document.getElementById('count-truck')) document.getElementById('count-truck').innerText = trucks;
-            liveChart.data.datasets[0].data = [day23, day30, cutters, trucks];
-            liveChart.update();
-            if (lastUpdateEl) lastUpdateEl.innerText = new Date().toLocaleTimeString();
-        };
-
-        // Auth and Listen logic
-        const startLiveTracking = async () => {
-            if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                await signInWithCustomToken(auth, __initial_auth_token);
-            } else {
-                await signInAnonymously(auth);
-            }
-            onAuthStateChanged(auth, (user) => {
-                if (!user) return;
-                const statsRef = doc(db, 'artifacts', appId, 'public', 'data', 'stats', 'live_summary');
-                onSnapshot(statsRef, (snapshot) => {
-                    if (snapshot.exists()) {
-                        updateUI(snapshot.data());
-                    } else {
-                        // 開発用デモ数値
-                        updateUI({ day23: 35, day30: 25, cutters: 12, trucks: 8 });
-                    }
-                }, (error) => { console.error("Firestore Error:", error); });
-            });
-        };
-        startLiveTracking().catch(console.error);
-    </script>
-
-    <!-- 静的ビジュアルロジック -->
-    <script>
-        window.addEventListener('load', function() {
-            const ctxEquip = document.getElementById('equipmentChart').getContext('2d');
-            new Chart(ctxEquip, {
-                type: 'bar',
-                data: {
-                    labels: ["刈払機", "軽トラック", "重機等", "手鎌・他"],
-                    datasets: [{
-                        label: '目標出動数',
-                        data: [20, 15, 3, 50],
-                        backgroundColor: ['#14b8a6', '#1e3a8a', '#f97316', '#eab308'],
-                        borderRadius: 6,
-                        barThickness: 28
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    scales: {
-                        y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 }, precision: 0 } },
-                        x: { grid: { display: false }, ticks: { font: { size: 9, weight: 'bold' } } }
-                    },
-                    plugins: { legend: { display: false } }
-                }
-            });
-
-            const ctxPart = document.getElementById('participationChart').getContext('2d');
-            new Chart(ctxPart, {
-                type: 'doughnut',
-                data: {
-                    labels: ["引津ホゴシャ", "地域有志・OB", "教職員・実行委員"],
-                    datasets: [{
-                        data: [130, 50, 20],
-                        backgroundColor: ['#14b8a6', '#1e3a8a', '#eab308'],
-                        borderWidth: 4,
-                        borderColor: '#ffffff',
-                        hoverOffset: 12
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'bottom', labels: { font: { family: "'Noto Sans JP'", weight: 'bold', size: 10 }, padding: 15 } }
-                    },
-                    cutout: '68%'
-                }
-            });
-        });
-    </script>
 </body>
 </html>
