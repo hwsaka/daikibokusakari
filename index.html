@@ -19,17 +19,21 @@
             color: #1e293b;
             overflow-x: hidden;
         }
-        .hero-gradient {
-            background: linear-gradient(135deg, var(--navy) 0%, #1e40af 100%);
-        }
-        .card-shadow {
-            box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.05), 0 8px 10px -6px rgba(30, 58, 138, 0.05);
-        }
+        .hero-gradient { background: linear-gradient(135deg, var(--navy) 0%, #1e40af 100%); }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(30,58,138,.05), 0 8px 10px -6px rgba(30,58,138,.05); }
         html { scroll-behavior: smooth; }
+ 
+        /* 速報ボタン専用アニメーション */
+        @keyframes pulse-ring {
+            0%   { box-shadow: 0 0 0 0 rgba(20,184,166,.5); }
+            70%  { box-shadow: 0 0 0 10px rgba(20,184,166,0); }
+            100% { box-shadow: 0 0 0 0 rgba(20,184,166,0); }
+        }
+        .sokuho-btn { animation: pulse-ring 2s ease-out infinite; }
     </style>
 </head>
 <body class="antialiased">
-
+ 
     <!-- ヒーローセクション -->
     <section class="hero-gradient text-white pt-16 pb-24 px-6 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-80 h-80 bg-white opacity-5 -mr-20 -mt-20 rounded-full"></div>
@@ -45,14 +49,25 @@
                 地域の集結力と機動力、そして子どもたちを想う心意気。<br class="hidden md:block">
                 最高に整った学び舎を、今年も共に。
             </p>
-            <div class="flex justify-center">
-                <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer" class="bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-12 rounded-full shadow-xl transition transform hover:scale-105 active:scale-95 text-xl">
+ 
+            <!-- ボタンエリア -->
+            <div class="flex flex-col items-center gap-4">
+                <!-- フォームボタン -->
+                <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer"
+                   class="bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-12 rounded-full shadow-xl transition transform hover:scale-105 active:scale-95 text-xl">
                     今すぐ参加回答する
+                </a>
+ 
+                <!-- 速報ボタン -->
+                <a href="https://hwsaka.github.io/-NW/" target="_blank" rel="noopener noreferrer"
+                   class="sokuho-btn flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-black py-3 px-10 rounded-full shadow-lg transition transform hover:scale-105 active:scale-95 text-base">
+                    <span class="inline-block w-2 h-2 bg-white rounded-full opacity-80" style="animation: pulse-ring 1.5s ease-out infinite;"></span>
+                    参加者速報を見る
                 </a>
             </div>
         </div>
     </section>
-
+ 
     <!-- 圧巻のパフォーマンスセクション -->
     <section class="max-w-6xl mx-auto px-6 -mt-12 mb-10 relative z-20">
         <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow border border-slate-100">
@@ -69,34 +84,34 @@
                     </div>
                 </div>
                 <div class="w-full md:w-1/2 grid grid-cols-2 gap-4">
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center transition hover:bg-white hover:shadow-md">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
                         <div class="text-4xl mb-2">🚜</div>
-                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-tighter text-center">Machinery</p>
-                        <p class="font-black text-navy text-center">本格重機出動</p>
+                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase">Machinery</p>
+                        <p class="font-black text-navy">本格重機出動</p>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center transition hover:bg-white hover:shadow-md">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
                         <div class="text-4xl mb-2">✂️</div>
-                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-tighter text-center">Cutters</p>
-                        <p class="font-black text-navy text-center">刈払機 20台超</p>
+                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase">Cutters</p>
+                        <p class="font-black text-navy">刈払機 20台超</p>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center transition hover:bg-white hover:shadow-md">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
                         <div class="text-4xl mb-2">👑</div>
-                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-tighter text-center">Self-prop</p>
-                        <p class="font-black text-navy text-center">自走式まさお</p>
+                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase">Self-prop</p>
+                        <p class="font-black text-navy">自走式まさお</p>
                     </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center transition hover:bg-white hover:shadow-md">
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 text-center">
                         <div class="text-4xl mb-2">🛻</div>
-                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-tighter text-center">Trucks</p>
-                        <p class="font-black text-navy text-center">軽トラ 15台規模</p>
+                        <p class="text-[10px] font-bold text-slate-400 mb-1 uppercase">Trucks</p>
+                        <p class="font-black text-navy">軽トラ 15台規模</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- 今年のトピックセクション -->
     <section class="max-w-6xl mx-auto px-6 mb-16">
-        <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm relative">
+        <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm">
             <div class="flex flex-col lg:flex-row lg:items-start gap-6">
                 <div class="flex-shrink-0">
                     <span class="inline-block bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded tracking-widest uppercase">
@@ -104,33 +119,29 @@
                     </span>
                 </div>
                 <div class="flex-grow">
-                    <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-4 flex items-center text-left">
-                        今年も強力な助っ人の参戦が決定いたしました
-                    </h3>
+                    <h3 class="text-lg md:text-xl font-bold text-slate-800 mb-4">今年も強力な助っ人の参戦が決定いたしました</h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-slate-50 p-4 rounded border border-slate-100 flex items-center shadow-sm">
                             <span class="text-2xl mr-4 opacity-70">🚛</span>
                             <div>
-                                <p class="text-xs font-bold text-slate-500 leading-none mb-1 text-left">ゆうごママ</p>
-                                <p class="text-base font-black text-navy text-left">3トンダンプカー</p>
+                                <p class="text-xs font-bold text-slate-500 mb-1">ゆうごママ</p>
+                                <p class="text-base font-black text-navy">3トンダンプカー</p>
                             </div>
                         </div>
                         <div class="bg-slate-50 p-4 rounded border border-slate-100 flex items-center shadow-sm">
                             <span class="text-2xl mr-4 opacity-70">🚜</span>
                             <div>
-                                <p class="text-xs font-bold text-slate-500 leading-none mb-1 text-left">とあパパ</p>
-                                <p class="text-base font-black text-navy text-left">Fordトラクター</p>
+                                <p class="text-xs font-bold text-slate-500 mb-1">とあパパ</p>
+                                <p class="text-base font-black text-navy">Fordトラクター</p>
                             </div>
                         </div>
                     </div>
-                    <p class="mt-4 text-xs text-slate-500 italic text-left">
-                        ※地域の皆様の温かなご協力が、今年も子どもたちの学び舎を支えます。
-                    </p>
+                    <p class="mt-4 text-xs text-slate-500 italic">※地域の皆様の温かなご協力が、今年も子どもたちの学び舎を支えます。</p>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- ガイドセクション -->
     <section id="details" class="max-w-6xl mx-auto px-6 mb-16">
         <h2 class="text-2xl md:text-3xl font-black text-navy mb-10 text-center flex items-center justify-center">
@@ -138,128 +149,121 @@
             開催・準備ガイド
             <span class="w-12 h-1 bg-teal-500 ml-4 rounded-full"></span>
         </h2>
-        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-            <!-- 日程 -->
             <div class="space-y-6">
-                <h3 class="text-xl font-bold text-navy flex items-center text-left">
-                    <span class="text-3xl mr-3 text-slate-300">🗓</span> 日程と期限
-                </h3>
-                <div class="bg-white p-6 rounded-2xl border-l-8 border-teal-500 card-shadow text-left">
-                    <span class="text-[10px] font-bold text-teal-500 uppercase tracking-widest text-left">Main Day</span>
-                    <p class="text-4xl font-black text-navy mt-1 text-left">5/23 <span class="text-xl">（土）</span></p>
-                    <p class="text-lg font-bold text-slate-600 mt-2 text-left">8:00 ～ 10:00 <span class="text-sm font-normal text-slate-400">（集合 7:45）</span></p>
+                <h3 class="text-xl font-bold text-navy flex items-center"><span class="text-3xl mr-3 text-slate-300">🗓</span>日程と期限</h3>
+                <div class="bg-white p-6 rounded-2xl border-l-8 border-teal-500 card-shadow">
+                    <span class="text-[10px] font-bold text-teal-500 uppercase tracking-widest">Main Day</span>
+                    <p class="text-4xl font-black text-navy mt-1">5/23 <span class="text-xl">（土）</span></p>
+                    <p class="text-lg font-bold text-slate-600 mt-2">8:00 ～ 10:00 <span class="text-sm font-normal text-slate-400">（集合 7:45）</span></p>
                 </div>
-                <div class="flex justify-between items-center px-5 py-4 bg-slate-100 rounded-xl text-slate-600 border border-slate-200">
-                    <span class="text-sm font-bold text-left text-left">予備日（雨天順延）</span>
-                    <span class="text-lg font-black text-right">5/30（土）</span>
+                <div class="flex justify-between items-center px-5 py-4 bg-slate-100 rounded-xl border border-slate-200">
+                    <span class="text-sm font-bold text-slate-600">予備日（雨天順延）</span>
+                    <span class="text-lg font-black">5/30（土）</span>
                 </div>
                 <div class="bg-orange-500 p-6 rounded-2xl text-white shadow-lg text-center">
-                    <p class="text-xs font-bold mb-1 opacity-80 uppercase tracking-widest text-center">DeadLine</p>
-                    <p class="text-2xl font-black mb-1 text-center">5/16（土） 〆切</p>
-                    <p class="text-xs font-medium text-center">配置計画のため、期限厳守をお願いします！</p>
+                    <p class="text-xs font-bold mb-1 opacity-80 uppercase tracking-widest">DeadLine</p>
+                    <p class="text-2xl font-black mb-1">5/16（土） 〆切</p>
+                    <p class="text-xs font-medium">配置計画のため、期限厳守をお願いします！</p>
                 </div>
             </div>
-
-            <!-- 装備 -->
             <div class="space-y-6">
-                <h3 class="text-xl font-bold text-navy flex items-center text-left">
-                    <span class="text-3xl mr-3 text-slate-300">🎒</span> 装備とご協力
-                </h3>
+                <h3 class="text-xl font-bold text-navy flex items-center"><span class="text-3xl mr-3 text-slate-300">🎒</span>装備とご協力</h3>
                 <div class="space-y-4">
                     <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 card-shadow">
                         <div class="bg-orange-500 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0">1</div>
                         <div>
-                            <p class="font-bold text-navy text-left text-left">自慢の道具を持参！</p>
-                            <p class="text-xs text-slate-500 mt-1 text-left text-left text-slate-400">刈払機、手鎌、軍手、飲物など。</p>
+                            <p class="font-bold text-navy">自慢の道具を持参！</p>
+                            <p class="text-xs text-slate-400 mt-1">刈払機、手鎌、軍手、飲物など。</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-5 rounded-2xl bg-teal-50 border border-teal-100">
                         <div class="bg-teal-500 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0">2</div>
                         <div>
-                            <p class="font-bold text-teal-800 text-left text-left">車両提供のお願い</p>
-                            <p class="text-xs text-teal-700 mt-1 font-bold text-left text-left">軽トラ・ダンプ・トラクター大歓迎！</p>
+                            <p class="font-bold text-teal-800">車両提供のお願い</p>
+                            <p class="text-xs text-teal-700 mt-1 font-bold">軽トラ・ダンプ・トラクター大歓迎！</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 card-shadow">
-                        <div class="bg-slate-800 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0 text-sm text-center">3</div>
+                        <div class="bg-slate-800 text-white rounded w-10 h-10 flex items-center justify-center font-black flex-shrink-0 text-sm">3</div>
                         <div>
-                            <p class="font-bold text-navy text-left text-left">学校側のサポート</p>
-                            <p class="text-xs text-slate-500 mt-1 text-left text-left text-slate-400">鎌、松葉ぼうき、軽トラ用シートは貸出あり。</p>
+                            <p class="font-bold text-navy">学校側のサポート</p>
+                            <p class="text-xs text-slate-400 mt-1">鎌、松葉ぼうき、軽トラ用シートは貸出あり。</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- スピードフローセクション -->
     <section class="bg-white py-16 px-6 border-y border-slate-100">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-2xl md:text-3xl font-black text-navy mb-2 tracking-tight">引津式・スピード美化フロー</h2>
-            <p class="text-teal-600 font-bold mb-12 max-w-2xl mx-auto text-sm md:text-base text-center">完璧に練り上げられた役割分担が、圧倒的な効率を生み出します。</p>
-            
+            <p class="text-teal-600 font-bold mb-12 max-w-2xl mx-auto text-sm md:text-base">完璧に練り上げられた役割分担が、圧倒的な効率を生み出します。</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-yellow-400 text-center shadow-sm transition hover:shadow-md">
-                    <div class="text-5xl mb-4 text-center">🚜</div>
-                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">重機先導</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">トラクター等で広範囲を迅速に処理</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-yellow-400 text-center shadow-sm">
+                    <div class="text-5xl mb-4">🚜</div>
+                    <h4 class="text-navy font-black text-lg mb-2">重機先導</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">トラクター等で広範囲を迅速に処理</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-teal-500 text-center shadow-sm transition hover:shadow-md">
-                    <div class="text-5xl mb-4 text-center">✂️</div>
-                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">精鋭刈込</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">熟練の刈払機部隊による細部仕上げ</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-teal-500 text-center shadow-sm">
+                    <div class="text-5xl mb-4">✂️</div>
+                    <h4 class="text-navy font-black text-lg mb-2">精鋭刈込</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">熟練の刈払機部隊による細部仕上げ</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-orange-500 text-center shadow-sm transition hover:shadow-md">
-                    <div class="text-5xl mb-4 text-center">🧹</div>
-                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">一斉集草</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">丁寧な回収とトラックへの積込</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-orange-500 text-center shadow-sm">
+                    <div class="text-5xl mb-4">🧹</div>
+                    <h4 class="text-navy font-black text-lg mb-2">一斉集草</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">丁寧な回収とトラックへの積込</p>
                 </div>
-                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-blue-500 text-center shadow-sm transition hover:shadow-md">
-                    <div class="text-5xl mb-4 text-center">🚛</div>
-                    <h4 class="text-navy font-black text-lg mb-2 text-center text-center">集中輸送</h4>
-                    <p class="text-slate-500 text-xs leading-relaxed text-center text-center">軽トラ部隊による迅速な搬出作戦</p>
+                <div class="bg-slate-50 p-8 rounded-3xl border-t-4 border-blue-500 text-center shadow-sm">
+                    <div class="text-5xl mb-4">🚛</div>
+                    <h4 class="text-navy font-black text-lg mb-2">集中輸送</h4>
+                    <p class="text-slate-500 text-xs leading-relaxed">軽トラ部隊による迅速な搬出作戦</p>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!-- CTAセクション -->
     <section id="cta" class="max-w-4xl mx-auto px-6 py-24 text-center">
-        <div class="bg-slate-900 text-white rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden text-center">
+        <div class="bg-slate-900 text-white rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
             <div class="absolute -top-10 left-1/2 -translate-x-1/2 text-9xl opacity-10">🙌</div>
-            <h2 class="text-3xl md:text-5xl font-black mb-8 text-center text-white text-center">見せましょう、<br class="md:hidden">引津ホゴシャの底力！</h2>
-            <p class="text-lg text-slate-400 mb-12 leading-relaxed text-center text-center">
+            <h2 class="text-3xl md:text-5xl font-black mb-8 text-white">見せましょう、<br class="md:hidden">引津ホゴシャの底力！</h2>
+            <p class="text-lg text-slate-400 mb-12 leading-relaxed">
                 お父さん、お母さんはもちろん、地域の皆様！<br>
                 子どもたちの自慢の学校を、私たちの手で最高の状態に仕上げましょう。
             </p>
-            <div class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-10 backdrop-blur-sm text-center">
-                <p class="font-black text-2xl md:text-3xl mb-2 text-orange-400 text-center text-center">回答期限： 5月16日（土）まで</p>
-                <p class="text-sm text-slate-400 text-center text-center">※5/23・5/30両日の参加可否もフォーム内で選択可能です。</p>
+            <div class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-10">
+                <p class="font-black text-2xl md:text-3xl mb-2 text-orange-400">回答期限： 5月16日（土）まで</p>
+                <p class="text-sm text-slate-400">※5/23・5/30両日の参加可否もフォーム内で選択可能です。</p>
             </div>
-            <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer" class="inline-block w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-black py-6 px-16 rounded-full text-2xl shadow-2xl transition transform hover:scale-105 active:scale-95 mb-8 text-center text-center">
+            <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer"
+               class="inline-block w-full md:w-auto bg-orange-500 hover:bg-orange-600 text-white font-black py-6 px-16 rounded-full text-2xl shadow-2xl transition transform hover:scale-105 active:scale-95 mb-8">
                 Googleフォームで回答する
             </a>
         </div>
     </section>
-
+ 
     <!-- フッター -->
     <footer class="bg-slate-100 py-16 px-6 border-t border-slate-200">
         <div class="max-w-4xl mx-auto">
-            <div class="bg-white p-8 rounded-3xl border border-slate-200 mb-12 shadow-sm text-left">
-                <h3 class="font-bold text-navy mb-4 flex items-center text-left"><span class="mr-3">💡</span> 集計体制の変更について</h3>
-                <p class="text-sm text-slate-600 leading-relaxed text-left text-left">
-                    本年度より、子ども会単位での集計から<span class="font-bold text-orange-500 underline decoration-2">PTA（あおぞら会）による全校一括集計</span>へ移行いたしました。皆様のご理解をお願い申し上げます。
+            <div class="bg-white p-8 rounded-3xl border border-slate-200 mb-12 shadow-sm">
+                <h3 class="font-bold text-navy mb-4 flex items-center"><span class="mr-3">💡</span>集計体制の変更について</h3>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    本年度より、子ども会単位での集計から<span class="font-bold text-orange-500">PTA（あおぞら会）による全校一括集計</span>へ移行いたしました。皆様のご理解をお願い申し上げます。
                 </p>
             </div>
             <div class="text-center">
-                <p class="font-black text-navy text-xl mb-3 tracking-tight text-center text-center">引津小学校 大規模環境美化作業 実行委員会</p>
-                <p class="text-sm text-slate-500 mb-8 text-center text-center text-slate-500">事務局：引津小学校 あおぞら会準備事務局（教頭） / 電話：092-328-2207</p>
+                <p class="font-black text-navy text-xl mb-3 tracking-tight">引津小学校 大規模環境美化作業 実行委員会</p>
+                <p class="text-sm text-slate-500 mb-8">事務局：引津小学校 あおぞら会準備事務局（教頭） / 電話：092-328-2207</p>
                 <div class="h-px bg-slate-300 w-full mb-10 opacity-50"></div>
-                <p class="text-[10px] text-slate-400 tracking-widest font-black uppercase text-center text-center">&copy; 2026 HIKITSU ELEMENTARY SCHOOL PTA.</p>
+                <p class="text-[10px] text-slate-400 tracking-widest font-black uppercase">&copy; 2026 HIKITSU ELEMENTARY SCHOOL PTA.</p>
             </div>
         </div>
     </footer>
-
+ 
 </body>
 </html>
+ 
