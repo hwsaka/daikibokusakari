@@ -22,8 +22,7 @@
         .hero-gradient { background: linear-gradient(135deg, var(--navy) 0%, #1e40af 100%); }
         .card-shadow { box-shadow: 0 10px 25px -5px rgba(30,58,138,.05), 0 8px 10px -6px rgba(30,58,138,.05); }
         html { scroll-behavior: smooth; }
- 
-        /* 速報ボタン専用アニメーション */
+
         @keyframes pulse-ring {
             0%   { box-shadow: 0 0 0 0 rgba(20,184,166,.5); }
             70%  { box-shadow: 0 0 0 10px rgba(20,184,166,0); }
@@ -33,7 +32,7 @@
     </style>
 </head>
 <body class="antialiased">
- 
+
     <!-- ヒーローセクション -->
     <section class="hero-gradient text-white pt-16 pb-24 px-6 relative overflow-hidden">
         <div class="absolute top-0 right-0 w-80 h-80 bg-white opacity-5 -mr-20 -mt-20 rounded-full"></div>
@@ -49,7 +48,7 @@
                 地域の集結力と機動力、そして子どもたちを想う心意気。<br class="hidden md:block">
                 最高に整った学び舎を、今年も共に。
             </p>
- 
+
             <!-- ボタンエリア -->
             <div class="flex flex-col items-center gap-4">
                 <!-- フォームボタン -->
@@ -57,17 +56,17 @@
                    class="bg-orange-500 hover:bg-orange-600 text-white font-black py-4 px-12 rounded-full shadow-xl transition transform hover:scale-105 active:scale-95 text-xl">
                     今すぐ参加回答する
                 </a>
- 
+
                 <!-- 速報ボタン -->
                 <a href="https://hwsaka.github.io/-NW/" target="_blank" rel="noopener noreferrer"
                    class="sokuho-btn flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-black py-3 px-10 rounded-full shadow-lg transition transform hover:scale-105 active:scale-95 text-base">
-                    <span class="inline-block w-2 h-2 bg-white rounded-full opacity-80" style="animation: pulse-ring 1.5s ease-out infinite;"></span>
+                    <span class="inline-block w-2 h-2 bg-white rounded-full opacity-80"></span>
                     参加者速報を見る
                 </a>
             </div>
         </div>
     </section>
- 
+
     <!-- 圧巻のパフォーマンスセクション -->
     <section class="max-w-6xl mx-auto px-6 -mt-12 mb-10 relative z-20">
         <div class="bg-white rounded-3xl p-8 md:p-12 card-shadow border border-slate-100">
@@ -108,7 +107,7 @@
             </div>
         </div>
     </section>
- 
+
     <!-- 今年のトピックセクション -->
     <section class="max-w-6xl mx-auto px-6 mb-16">
         <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-sm">
@@ -141,7 +140,7 @@
             </div>
         </div>
     </section>
- 
+
     <!-- ガイドセクション -->
     <section id="details" class="max-w-6xl mx-auto px-6 mb-16">
         <h2 class="text-2xl md:text-3xl font-black text-navy mb-10 text-center flex items-center justify-center">
@@ -161,9 +160,10 @@
                     <span class="text-sm font-bold text-slate-600">予備日（雨天順延）</span>
                     <span class="text-lg font-black">5/30（土）</span>
                 </div>
+                <!-- 締切日変更：5/16 → 5/20 -->
                 <div class="bg-orange-500 p-6 rounded-2xl text-white shadow-lg text-center">
                     <p class="text-xs font-bold mb-1 opacity-80 uppercase tracking-widest">DeadLine</p>
-                    <p class="text-2xl font-black mb-1">5/16（土） 〆切</p>
+                    <p class="text-2xl font-black mb-1">5/20（火） 〆切</p>
                     <p class="text-xs font-medium">配置計画のため、期限厳守をお願いします！</p>
                 </div>
             </div>
@@ -195,7 +195,7 @@
             </div>
         </div>
     </section>
- 
+
     <!-- スピードフローセクション -->
     <section class="bg-white py-16 px-6 border-y border-slate-100">
         <div class="max-w-6xl mx-auto text-center">
@@ -225,7 +225,7 @@
             </div>
         </div>
     </section>
- 
+
     <!-- CTAセクション -->
     <section id="cta" class="max-w-4xl mx-auto px-6 py-24 text-center">
         <div class="bg-slate-900 text-white rounded-3xl p-10 md:p-16 shadow-2xl relative overflow-hidden">
@@ -236,7 +236,7 @@
                 子どもたちの自慢の学校を、私たちの手で最高の状態に仕上げましょう。
             </p>
             <div class="bg-white/5 border border-white/10 p-8 rounded-3xl mb-10">
-                <p class="font-black text-2xl md:text-3xl mb-2 text-orange-400">回答期限： 5月16日（土）まで</p>
+                <p class="font-black text-2xl md:text-3xl mb-2 text-orange-400">回答期限： 5月20日（火）まで</p>
                 <p class="text-sm text-slate-400">※5/23・5/30両日の参加可否もフォーム内で選択可能です。</p>
             </div>
             <a href="https://forms.gle/wMvUujhddcWjYPD96" target="_blank" rel="noopener noreferrer"
@@ -245,7 +245,7 @@
             </a>
         </div>
     </section>
- 
+
     <!-- フッター -->
     <footer class="bg-slate-100 py-16 px-6 border-t border-slate-200">
         <div class="max-w-4xl mx-auto">
@@ -263,7 +263,6 @@
             </div>
         </div>
     </footer>
- 
+
 </body>
 </html>
- 
